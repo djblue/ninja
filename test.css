@@ -1,0 +1,44 @@
+li { list-style-type: none; }
+
+body {  
+    background: #D8D8A8; 
+    font-size: 14px;
+}
+
+#results {
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+.pass, .fail {
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 2px;
+    /* and for those really long tests... */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* testing items */
+.pass:before, .fail:before {
+    font-weight: bold;
+    display: inline-block;
+    width: 50px;
+}
+
+.pass { /* pass colors */
+    color: #609000;
+    background: #F0F0D8;
+    border-left: 2px #609000 solid;
+}
+
+.fail { /* fail colors */
+    color: #F00000;
+    background: #C0C078;
+    border-left: 2px #F00000 solid;
+}
+
+/* status text */
+.pass:before { content: "PASS"; }
+.fail:before { content: "FAIL"; }
